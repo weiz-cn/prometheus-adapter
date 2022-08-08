@@ -11,7 +11,7 @@ COPY pkg pkg
 COPY cmd cmd
 COPY Makefile Makefile
 
-ARG ARCH
+ARG ARCH=amd64
 RUN make prometheus-adapter
 
 FROM gcr.io/distroless/static:latest
